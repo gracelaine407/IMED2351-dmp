@@ -3,15 +3,34 @@
 <head>
   
    <meta charset="utf-8">
-   <title>Document</title>
+   <title>Variables</title>
 </head>
 <body>
-   <h1>My First Web Page Using Javascript</h1>
-<p>My first paragraph using Javascript.</p>
+   <h1>My First Web Page Using Javascript Variables</h1>
+
+   <p id="menu"></p>
 
 <script>
-document.write(3+7);
+// Create an object:
+const menuItem1 = {label:"pizza", type:"pepperoni", size:"large", price:"$20"};
+
+// Display the property:
+document.getElementById("menu").innerHTML = "Daily special is a " + menuItem1.size + " " + menuItem1.type + " " + menuItem1.label + " regularly " + menuItem1.price; 
 </script>
-	<script src="./app.js"></script>
+
+<p id="discount"></p>
+<script>
+   // Assign the value 20 to x
+   let x = 20;
+   // Assign the value 85% to y
+   let y = .85;
+   // Assign the value x * y to z
+   let z = x * y;
+   // Display z
+   document.getElementById("discount").innerHTML = "Discounted price $" + z;
+   </script>
+
+<script src="./app.js"></script>
+
 </body>
 </html>
