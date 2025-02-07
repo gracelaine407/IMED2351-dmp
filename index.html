@@ -3,32 +3,68 @@
 <head>
   
    <meta charset="utf-8">
-   <title>Variables</title>
+   <title>Functions</title>
 </head>
+
 <body>
-   <h1>My First Web Page Using Javascript Variables</h1>
+   <h1>My First Web Page Using Javascript Functions</h1>
 
-   <p id="menu"></p>
+   <p>Call a function which performs a calculation and returns the result:</p>
 
-<script>
-// Create an object:
-const menuItem1 = {label:"pizza", type:"pepperoni", size:"large", price:"$20"};
+   <p id="demo"></p>
 
-// Display the property:
-document.getElementById("menu").innerHTML = "Daily special is a " + menuItem1.size + " " + menuItem1.type + " " + menuItem1.label + " regularly " + menuItem1.price; 
+<script> //create a function
+let x = myFunction(17, 40, 48);
+document.getElementById("demo").innerHTML = x;
+
+function myFunction(a, b, c) {
+  return a * b * c;
+}
 </script>
 
-<p id="discount"></p>
+<h1>JavaScript Object Properties</h1>
+<h2>Access a Property with .</h2>
+
+<p id="demo2"></p>
+
+<script> //create an object
+const person = {
+  firstname: "Kathy",
+  lastname: "Grace",
+  height: "short",
+  eyecolor: "brown"
+};
+
+document.getElementById("demo2").innerHTML = person.firstname + " has " + person.eyecolor + " eyes.";
+</script>
+
+<h2>Add a method</h2>
+
+<p id="demo3"></p>
+
 <script>
-   // Assign the value 20 to x
-   let x = 20;
-   // Assign the value 85% to y
-   let y = .85;
-   // Assign the value x * y to z
-   let z = x * y;
-   // Display z
-   document.getElementById("discount").innerHTML = "Discounted price $" + z;
+   // Create an Object
+   const person1 = {
+     firstName: "Kathy",
+     lastName: "Grace",
+     id: 1234,
+   };
+   
+   // Add a Method
+   person1.name = function() {
+     return (this.firstName + " " + this.lastName).toUpperCase();
+   };
+   
+   // Display Object Data
+   document.getElementById("demo3").innerHTML =
+   "My name is " + person1.name(); 
    </script>
+
+<h1>JavaScript HTML Events</h1>
+<h2>The onclick Attribute</h2> 
+
+
+<button onclick="this.innerHTML=Date()">The current time is:</button> 
 
 <script src="./app.js"></script>
 
