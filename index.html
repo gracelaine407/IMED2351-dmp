@@ -3,69 +3,91 @@
 <head>
   
    <meta charset="utf-8">
-   <title>Functions</title>
+   <title>Strings and Conditions</title>
 </head>
 
 <body>
-   <h1>My First Web Page Using Javascript Functions</h1>
-
-   <p>Call a function which performs a calculation and returns the result:</p>
-
+   <h2>My First Web Page Using Javascript strings and conditions</h2>
    <p id="demo"></p>
+<script>  //concatenated string variable
+let text1 = "Hello";
+let text2 = "world!";
+let text3 = "Have a nice day!";
+let result = text1.concat(" ", text2, " ", text3);
 
-<script> //create a function
-let x = myFunction(17, 40, 48);
-document.getElementById("demo").innerHTML = x;
+document.getElementById("demo").innerHTML = result;
+</script>
 
-function myFunction(a, b, c) {
-  return a * b * c;
+   <h3>JavaScript String Methods</h3>
+<p>Convert string to upper case:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo1">I love Dachshunds!</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("demo1").innerHTML;
+  document.getElementById("demo1").innerHTML =
+  text.toUpperCase();
 }
 </script>
 
-<h1>JavaScript Object Properties</h1>
-<h2>Access a Property with .</h2>
-
-<p id="demo2"></p>
-
-<script> //create an object
-const person = {
-  firstname: "Kathy",
-  lastname: "Grace",
-  height: "short",
-  eyecolor: "brown"
-};
-
-document.getElementById("demo2").innerHTML = person.firstname + " has " + person.eyecolor + " eyes.";
+<p>The Number() method can convert a date to a number:</p>
+<p>Today's date, 02-14-2025, converted to a number is </p>
+<p id="demo2"></p>	
+<script>
+let x = new Date("2025-02-14");
+document.getElementById("demo2").innerHTML = Number(x); 
 </script>
 
-<h2>Add a method</h2>
+<h3>JavaScript conditionals</h3>
 
-<p id="demo3"></p>
+<p>A time-based greeting:</p>
+<p id="demo3"></p>	
+<script>  // if...else conditional statement
+const time = new Date().getHours();
+let greeting;
+if (time < 12) {
+  greeting = "Good morning";
+} else if (time < 17) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+document.getElementById("demo3").innerHTML = greeting;
+</script>
 
+<h3>JavaScript switch</h3>
+
+<p>Day of the week:</p>
+	<p id="demo4"></p>	
 <script>
-   // Create an Object
-   const person1 = {
-     firstName: "Kathy",
-     lastName: "Grace",
-     id: 1234,
-   };
-   
-   // Add a Method
-   person1.name = function() {
-     return (this.firstName + " " + this.lastName).toUpperCase();
-   };
-   
-   // Display Object Data
-   document.getElementById("demo3").innerHTML =
-   "My name is " + person1.name(); 
-   </script>
-
-<h1>JavaScript HTML Events</h1>
-<h2>The onclick Attribute</h2> 
-
-
-<button onclick="this.innerHTML=Date()">The current time is:</button> 
-
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo4").innerHTML = "Today is " + day;
+</script>
 <script src="./app.js"></script>
 
 </body>
