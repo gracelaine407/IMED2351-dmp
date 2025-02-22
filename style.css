@@ -1,0 +1,21 @@
+/* Body styling */
+body {
+    background: #5e308b;
+    color: #fff;
+    font-family: Calibri;
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 1.65em;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 40px 10px;  
+  }
+  
+  
+  /* Heading Styles */
+  h1 {
+    font-size: 75px;
+    color: #fff;
+    text-align: center;
+  }
+  

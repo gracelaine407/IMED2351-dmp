@@ -3,91 +3,41 @@
 <head>
   
    <meta charset="utf-8">
-   <title>Strings and Conditions</title>
+   <title>Loops and DOM</title>
+   <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-   <h2>My First Web Page Using Javascript strings and conditions</h2>
-   <p id="demo"></p>
-<script>  //concatenated string variable
-let text1 = "Hello";
-let text2 = "world!";
-let text3 = "Have a nice day!";
-let result = text1.concat(" ", text2, " ", text3);
+   <h2>My First Web Page Using Javascript Loops and DOM</h2>
 
-document.getElementById("demo").innerHTML = result;
-</script>
-
-   <h3>JavaScript String Methods</h3>
-<p>Convert string to upper case:</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo1">I love Dachshunds!</p>
+   <h3>JavaScript For Loop</h3>
+ 
+<p>Dog breeds I've owned:</p>
+<p id="demo"></p>
 
 <script>
-function myFunction() {
-  let text = document.getElementById("demo1").innerHTML;
-  document.getElementById("demo1").innerHTML =
-  text.toUpperCase();
-}
-</script>
+  const dogs = ["Dachshund", "Aussie", "Sheltie", "Terrior"];
+  let i, len, text;
+  for (i = 0, len = dogs.length, text = ""; i < len; i++) {
+    text += dogs[i] + "<br>";
+  }
+  document.getElementById("demo").innerHTML = text;
+  </script>
 
-<p>The Number() method can convert a date to a number:</p>
-<p>Today's date, 02-14-2025, converted to a number is </p>
-<p id="demo2"></p>	
-<script>
-let x = new Date("2025-02-14");
-document.getElementById("demo2").innerHTML = Number(x); 
-</script>
+<h3>JavaScript While Loop</h3>
 
-<h3>JavaScript conditionals</h3>
+<p>see console log</p>
 
-<p>A time-based greeting:</p>
-<p id="demo3"></p>	
-<script>  // if...else conditional statement
-const time = new Date().getHours();
-let greeting;
-if (time < 12) {
-  greeting = "Good morning";
-} else if (time < 17) {
-  greeting = "Good day";
-} else {
-  greeting = "Good evening";
-}
-document.getElementById("demo3").innerHTML = greeting;
-</script>
+<h2 class="title" id="id1">I love Dachshunds!</h2>
 
-<h3>JavaScript switch</h3>
 
-<p>Day of the week:</p>
-	<p id="demo4"></p>	
-<script>
-let day;
-switch (new Date().getDay()) {
-  case 0:
-    day = "Sunday";
-    break;
-  case 1:
-    day = "Monday";
-    break;
-  case 2:
-    day = "Tuesday";
-    break;
-  case 3:
-    day = "Wednesday";
-    break;
-  case 4:
-    day = "Thursday";
-    break;
-  case 5:
-    day = "Friday";
-    break;
-  case  6:
-    day = "Saturday";
-}
-document.getElementById("demo4").innerHTML = "Today is " + day;
-</script>
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'turquoise'">
+Click Me!</button>
+
+
+
+
 <script src="./app.js"></script>
 
 </body>
