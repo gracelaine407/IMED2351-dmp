@@ -3,31 +3,57 @@
 <head>
   
    <meta charset="utf-8">
-   <title>Loops and DOM</title>
+   <title>Arrays and Objects</title>
    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
 
-   <h2>My First Web Page Using Javascript Loops and DOM</h2>
+   <h2>My Web Page Using Javascript Arrays and Objects</h2>
 
-   <h3>JavaScript For Loop</h3>
+   <h3>JavaScript Array</h3>
  
 <p>Dog breeds I've owned:</p>
-<p id="demo"></p>
 
+<p id="demo"></p>
 <script>
+  // Create an Array
   const dogs = ["Dachshund", "Aussie", "Sheltie", "Terrior"];
-  let i, len, text;
-  for (i = 0, len = dogs.length, text = ""; i < len; i++) {
-    text += dogs[i] + "<br>";
-  }
-  document.getElementById("demo").innerHTML = text;
+  
+  document.getElementById("demo").innerHTML = "Array:" + (dogs instanceof Array);
   </script>
 
-<h3>JavaScript While Loop</h3>
+<p id="demo2"></p>
+<script>
+  // Create an Array Method
+  
+  document.getElementById("demo2").innerHTML = dogs.toString();
+  </script>
 
-<p>see console log</p>
+<br>
+<h3>JavaScript Object</h3>
+<p id="demo3"></p>
+
+<script>
+
+// Constructor function for Breed objects
+function Breed(height, coat, personality, eye) {
+  this.height = height;
+  this.coat = coat;
+  this.personality = personality;
+  this.eyeColor = eye;
+}
+
+// Create three Breed objects
+const Dachshund = new Breed("short", "long", "snuggly", "brown");
+const Aussie = new Breed("tall", "long", "loyal", "blue");
+const Sheltie = new Breed("medium", "long", "shy", "brown")
+
+// Display personality
+document.getElementById("demo3").innerHTML =
+"Dachshunds are " + Dachshund.personality + ". Aussies are " + Aussie.personality + ". Shelties are " + Sheltie.personality + "."; 
+
+</script>
 
 <h2 class="title" id="id1">I love Dachshunds!</h2>
 

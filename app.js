@@ -3,7 +3,7 @@
 
 var Firstname = "Kathy" //This is a global variable and it is a string variable
 
-var Assignment ="Assignment 5.4"
+var Assignment ="Assignment 6.4"
 
 console.log(Firstname);
 console.log(Assignment);
