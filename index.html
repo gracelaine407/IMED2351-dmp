@@ -1,69 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  
-   <meta charset="utf-8">
-   <title>Arrays and Objects</title>
-   <link href="style.css" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rock paper and scissors</title>
+  </head>
+  <body>
+    <section class="game">
+      <div class="score">
+        <div class="player-score">
+          <h2>Player</h2>
+          <p>0</p>
+        </div>
+        <div class="computer-score">
+          <h2>Computer</h2>
+          <p>0</p>
+        </div>
+      </div>
 
-<body>
+      <div class="intro">
+        <h1>Rock Paper and Scissors</h1>
+        <button>Let's Play</button>
+      </div>
 
-   <h2>My Web Page Using Javascript Arrays and Objects</h2>
+      <div class="match fadeOut">
+        <h2 class="winner">Choose an option</h2>
+        <div class="hands">
+          <img class="player-hand" src="./assets/rock.png" alt="" />
+          <img class="computer-hand" src="./assets/rock.png" alt="" />
+        </div>
+        <div class="options">
+          <button class="rock">rock</button>
+          <button class="paper">paper</button>
+          <button class="scissors">scissors</button>
+        </div>
+      </div>
+    </section>
 
-   <h3>JavaScript Array</h3>
- 
-<p>Dog breeds I've owned:</p>
-
-<p id="demo"></p>
-<script>
-  // Create an Array
-  const dogs = ["Dachshund", "Aussie", "Sheltie", "Terrior"];
-  
-  document.getElementById("demo").innerHTML = "Array:" + (dogs instanceof Array);
-  </script>
-
-<p id="demo2"></p>
-<script>
-  // Create an Array Method
-  
-  document.getElementById("demo2").innerHTML = dogs.toString();
-  </script>
-
-<br>
-<h3>JavaScript Object</h3>
-<p id="demo3"></p>
-
-<script>
-
-// Constructor function for Breed objects
-function Breed(height, coat, personality, eye) {
-  this.height = height;
-  this.coat = coat;
-  this.personality = personality;
-  this.eyeColor = eye;
-}
-
-// Create three Breed objects
-const Dachshund = new Breed("short", "long", "snuggly", "brown");
-const Aussie = new Breed("tall", "long", "loyal", "blue");
-const Sheltie = new Breed("medium", "long", "shy", "brown")
-
-// Display personality
-document.getElementById("demo3").innerHTML =
-"Dachshunds are " + Dachshund.personality + ". Aussies are " + Aussie.personality + ". Shelties are " + Sheltie.personality + "."; 
-
-</script>
-
-<h2 class="title" id="id1">I love Dachshunds!</h2>
-
-
-<button type="button" 
-onclick="document.getElementById('id1').style.color = 'turquoise'">
-Click Me!</button>
-
-</body>
-
-<script src="./app.js"></script>
-
+    <script src="app.js"></script>
+  </body>
 </html>
